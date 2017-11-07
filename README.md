@@ -8,6 +8,9 @@ library(tidyverse)
 library(wordcloud2)
 library(recharts)
 library(reshape2)
+```
+
+```s
 food<-read.csv('food.csv',header=T)
 cost<-read.csv("cost.csv",header = T)
 ```
@@ -44,8 +47,7 @@ wordcloud2(cost,size=1)
 可以看到，即使没算进初期的安置费用，我的生活开销仍然是一笔不菲的数额，若大的换房两个字让我和房子中介的撕逼过程历历在目，代课说的是一笔不可描述的交易，其它的看起来仿佛也没有多少。
 
 总的来说，我这22天花的钱如下：
-<font size=40>2929.5元</font>
-
+### 2929.5元
 
 
 以上就是我有记录的实习以来的开销了的实习过程中的开销了，非常详细，希望能对大家有所借鉴。
