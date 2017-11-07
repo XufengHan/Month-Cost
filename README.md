@@ -18,7 +18,7 @@ cost<-read.csv("cost.csv",header = T)
 eLine(food,xvar=~Date,yvar=~Breakfast+Lunch+Dinner)
 ```
 
-# 吃饭开销雷达图
+## 吃饭开销雷达图
 用雷达图来看我每周一天三餐的消费会不会直观点，好吧其实并没有。
 ```s
 food$week<-c('Mon','Tue','Wed','Thu','Fri','Sat','Sun','Mon','Tue','Wed','Thu','Fri','Sat','Sun','Mon','Tue','Wed','Thu','Fri','Sat','Sun','Mon')
@@ -26,7 +26,7 @@ food_long<-melt(food[,-5],value.name = "Money",variable.name = "food")
 eRadar(food_long,xvar= ~week, yvar=~Money, series=~food)
 ```
 
-# 数据补充说明
+## 数据补充说明
 大家可能看到我的不少伙食开销是0，这其中发生了什么呢？
 ```s
 food$label<-rep(1,22)#添加计数标签
@@ -36,7 +36,7 @@ wordcloud2(sentence,size=0.5)
 图中可以看到，我靠煮汤圆和泡面蹭过了6次晚餐，留宿朋友+冲网费换来了一顿请客，有时候周末早餐没吃（睡过了），回了趟学校刷了校园卡，再就是部门组织的一次聚餐了，看了之后有没觉得我们的活动状况和账单息息相关。
 
 
-# 其它生活开支
+## 其它生活开支
 真正的大头来了，毕竟我国的恩格尔系数有那么高了，食物占不到我们开销的多大比例。
 ```s
 wordcloud2(cost,size=1)
